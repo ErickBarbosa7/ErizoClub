@@ -1,4 +1,3 @@
-import React from 'react';
 import './ActionButtons.css';
 
 function ActionButtons() {

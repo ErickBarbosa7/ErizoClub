@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Gallery.css';
 
 // Importa aquí algunas fotos de ejemplo o usa URLs
