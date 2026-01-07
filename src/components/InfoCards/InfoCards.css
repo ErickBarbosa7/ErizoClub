@@ -1,0 +1,85 @@
+.achievements-section {
+    padding: 3rem 1.5rem;
+    background-color: #f7f1e3; /* Mismo fondo crema para continuidad */
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: #2d3436;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Diseño Base de la Tarjeta */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    flex: 1 1 280px; /* Crecen pero tienen base de 280px */
+    max-width: 350px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 50%;
+    background: #f1f2f6;
+}
+
+.card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #2d3436;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #636e72;
+    line-height: 1.5;
+}
+
+/* Colores Específicos para dar vida */
+
+/* Eco */
+.card.eco:hover { border-color: #badc58; }
+.card.eco .card-icon { background-color: #eafbea; }
+
+/* Style */
+.card.style:hover { border-color: #f6e58d; }
+.card.style .card-icon { background-color: #fff9c4; }
+
+/* Gift - Destacada */
+.card.gift {
+    border: 2px dashed #ff7979; /* Borde punteado como cupón */
+    background-color: #fff5f5;
+}
+
+.card.gift strong {
+    background-color: #ff7979;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}

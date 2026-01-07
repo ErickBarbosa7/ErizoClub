@@ -1,0 +1,100 @@
+.vibe-section {
+    padding: 2rem 1.5rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+    opacity: 0.6;
+}
+
+.section-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #2d3436;
+    font-weight: 700;
+}
+
+.line {
+    height: 1px;
+    background-color: #2d3436;
+    width: 30px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Diseño de Tarjeta Horizontal */
+.vibe-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #fdfbfb;
+    border-radius: 15px;
+    text-decoration: none;
+    border: 1px solid #eee;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.vibe-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-color: transparent;
+}
+
+.icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    width: 50px;
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.title {
+    font-weight: 800;
+    color: #2d3436;
+    font-size: 1.1rem;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #636e72;
+    margin-top: 4px;
+}
+
+/* Colores específicos al hacer Hover */
+
+/* Spotify Green */
+.spotify:hover .icon { animation: bounce 1s infinite; }
+.spotify:hover .title { color: #1DB954; }
+
+/* Care Blue */
+.care:hover .icon { animation: wiggle 1s infinite; }
+.care:hover .title { color: #74b9ff; }
+
+/* Chat Orange */
+.chat:hover .icon { animation: pulse 1s infinite; }
+.chat:hover .title { color: #ff7675; }
+
+/* Animaciones simples */
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes wiggle { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-10deg); } 75% { transform: rotate(10deg); } }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }

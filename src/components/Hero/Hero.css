@@ -1,0 +1,146 @@
+/* --- CONFIGURACIÓN DEL CONTENEDOR --- */
+.hero-qr-section {
+    position: relative;
+    /* Ocupa TODA la pantalla visible del celular */
+    min-height: 100dvh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center;     /* Centrado horizontal */
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #fff 0%, #fdfbf7 100%);
+    overflow: hidden; /* Para que nada se salga de la pantalla */
+}
+
+/* --- EL CONTENIDO --- */
+.hero-content {
+    z-index: 2; /* Para estar encima del fondo */
+    width: 100%;
+    max-width: 500px; /* Que no se estire demasiado en PC */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Espacio entre elementos */
+}
+
+/* --- LOGO --- */
+.logo-wrapper {
+    margin-bottom: 1.5rem; /* Un poco más de espacio abajo para que respire */
+    animation: float 4s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-logo {
+    /* ANTES: 140px -> AHORA: 220px */
+    width: 260px; 
+    height: 260px; /* Forzamos que sea cuadrado o proporcional */
+    object-fit: contain;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+    max-width: 70vw; 
+}
+
+/* --- TIPOGRAFÍA --- */
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4rem); 
+    line-height: 1.1;
+    color: #2d3436;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -1px;
+}
+
+.highlight {
+    color: #ff6b6b; /* Color acento de Erizo Club */
+    background: linear-gradient(120deg, rgba(255,107,107,0.1) 0%, rgba(255,107,107,0) 100%);
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.hero-text {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    color: #636e72;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 90%; /* Evita que el texto toque los bordes del celular */
+}
+
+.hero-text strong {
+    color: #2d3436;
+    font-weight: 700;
+}
+
+/* --- BOTÓN CTA (El rey de la pantalla) --- */
+.cta-container {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-instagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Botón ancho en celular */
+    padding: 18px 25px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; /* Forma de píldora */
+    box-shadow: 0 10px 25px rgba(220, 39, 67, 0.4); /* Sombra brillante */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-instagram:active {
+    transform: scale(0.96); /* Efecto de click */
+    box-shadow: 0 5px 15px rgba(220, 39, 67, 0.3);
+}
+
+.cta-subtext {
+    font-size: 0.85rem;
+    color: #b2bec3;
+    font-weight: 500;
+}
+
+/* --- DECORACIÓN --- */
+/* Una mancha de color sutil detrás para dar profundidad */
+.bg-blob {
+    position: absolute;
+    top: -10%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: #ff6b6b;
+    opacity: 0.05;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    animation: pulseBlob 6s infinite alternate;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulseBlob {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.2); }
+}
+
+@media (max-height: 700px) {
+    .hero-logo { 
+        width: 160px; /* Aún así se ve grande, pero cabe */
+        height: 160px; 
+    }
+    .hero-title { font-size: 2rem; }
+    .hero-qr-section { padding: 1rem; }
+}
