@@ -13,9 +13,7 @@ function Header() {
                 </div>
 
                 {/* Un solo enlace sutil: "¿Quieres ver más?" */}
-                <a href="https://tu-tienda-o-catalogo.com" className="shop-link">
-                    Ir a la tienda ➔
-                </a>
+                
             </div>
         </header>
     );
